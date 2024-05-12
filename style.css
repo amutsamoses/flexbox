@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* PRESETS OR DEFAULTS VALUES */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+/* THE CSS BOX MODEL */
+/* PADDING,MARGIN,WIDTH,HEIGHT */
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  line-height: 1.7;
+  font-style: normal;
+  background-color: hsl(36, 100%, 99%);
+}
+
+/* Container */
+.container {
+  width: 100%; /* 1rem=10px 90rem=900px*/
+  max-width: 90rem;
+  background-color: hsl(36, 100%, 99%);
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* Navigation bar */
+.navigation {
+  display: flex;
+  /* padding-top: 5rem;
+  padding-bottom: 5rem; */
+  padding-block: 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation-items {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.navigation-items li {
+  flex: 1;
+  font-size: 1rem;
+}
+.navigation-items li a:link {
+  color: hsl(233, 8%, 79%);
+  transition: all 0.2s ease;
+}
+
+.menu-icon {
+  display: none;
+}
+/* MAIN CONTENT */
+/* .main {
+} */
+.cont-1 {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.main-content {
+  /* setting width on a flex item */
+  flex-basis: 50rem;
+  /* background-color: bisque; */
+}
+.img-cont {
+  display: block;
+  height: 20rem;
+}
+.main-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.main-content--items {
+  display: flex;
+  gap: 2rem;
+  padding-top: 1.5rem;
+}
+
+.main-content--items > * {
+  flex: 0 1 50%;
+}
+h1 {
+  font-weight: 800;
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.main-content--item-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-content--item-2 p {
+  font-size: 1.2rem;
+}
+.main-content--item-2 button {
+  align-self: flex-start;
+  background-color: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  padding-block: 1.2rem;
+  padding-inline: 2.5rem;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  letter-spacing: 4px;
+
+  transition: all 0.3s ease;
+}
+
+/* Styling of the aside content */
+.aside-content {
+  align-self: stretch;
+  background-color: hsl(240, 100%, 5%);
+  flex: 1;
+  /* gap: 1rem; */
+  color: #fff;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+.aside-content--items {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.aside-content--items li {
+  padding-block: 1.2rem;
+}
+.aside-content--items > *:not(:last-child) {
+  border-bottom: 1px solid #ffffff65;
+}
+
+h2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline-block;
+
+  transition: all 0.2s ease;
+}
+/* Refactoring your code */
+h2:hover {
+  color: hsl(36, 100%, 99%);
+  cursor: pointer;
+}
+.aside-subheading {
+  display: block;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.aside-text {
+  color: hsl(233, 8%, 79%);
+}
+
+/* Styling container 2 */
+.cont-2 {
+  display: flex;
+  gap: 7rem;
+  padding-top: 3rem;
+}
+.card-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+}
+.card-img {
+  display: block;
+  width: 50%;
+  height: 8rem;
+  /* flex: 1; */
+}
+.card-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* .card-item div {
+  /* flex: 1; */
+
+.card-item div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: hsl(233, 8%, 79%);
+}
+.card-item--text {
+  font-weight: 500;
+  color: hsl(236, 13%, 42%);
+}
+
+/* RESPONSIVENESS */
+@media only screen and (min-width: 992px) {
+  .main-content--item-2 button:hover {
+    cursor: pointer;
+    background-color: hsl(240, 100%, 5%);
+  }
+  .aside-subheading:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+  }
+  .navigation-items li a:hover {
+    color: hsl(5, 85%, 63%);
+  }
+}
+@media screen and (max-width: 992px) {
+  .cont-1 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .main-content {
+    /* setting width on a flex item */
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-content--items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 1.5rem;
+  }
+  .cont-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 3rem;
+  }
+  .navigation-items {
+    display: none;
+    align-items: center;
+    gap: 3rem;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
